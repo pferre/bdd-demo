@@ -7,7 +7,7 @@ with the cache and logs directories.
 
 http://symfony.com/doc/current/book/installation.html#checking-symfony-application-configuration-and-setup
 
-Instructions after you've cloned the repo
+Instructions after you've cloned the repo:
 
 ```bash
 composer install -o
@@ -24,4 +24,7 @@ Run the phpspec test
 bin/phpspec run --format=pretty
 ```
 
+Slides: https://speakerdeck.com/pferre/behat-and-phpspec-workshop
+
+Google Hangout: https://www.youtube.com/watch?v=9tKLCjqJ1kQ
 
