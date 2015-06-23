@@ -1,0 +1,13 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: demo
+    database_user: root
+    database_password: null
+    database_path: '%kernel.root_dir%/../data/demo.sqlite'
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: ed5a1e272b8d9fe12c3cf633c4e681a89ef939e0

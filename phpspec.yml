@@ -1,0 +1,3 @@
+suites:
+    demo:
+        namespace: AppBundle

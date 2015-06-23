@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Demoing the Demo!{% endblock %}
+
+{% block content %}
+      <div class="starter-template">
+        <h1 class="lead">Listing of products</h1>
+
+		<div class="row">
+		  <div class="col-xs-6 col-md-12">
+		  	{% for product in products %}
+
+		  		<div class="thumbnail">
+	  				<img src="#" alt="" data-src="holder.js/171x180">
+	  				<span class="product-name">{{ product.name }}</span>
+					<form action="{{ path('cart_add', { 'id': product.id }) }}" method="post">
+						<button id="add_{{ product.name }}" type="submit" class="btn btn-primary">Add {{ product.name }}</button>
+					</form>
+
+					<form action="{{ path('cart_remove', { 'id': product.id }) }}" method="post">
+						<button id="remove_{{ product.name }}" type="submit" class="btn btn-danger">Remove {{ product.name }}</button>
+					</form>
+		  		</div>
+
+		    {% endfor %}
+		  </div>
+		</div>
+
+      </div>
+{% endblock %}

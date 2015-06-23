@@ -1,0 +1,13 @@
+default:
+  suites:
+    default:
+      contexts:
+        - CartContext
+  extensions:
+    Behat\Symfony2Extension: ~
+    Behat\MinkExtension:
+      base_url: http://demo.app:8000
+      # selenium2: ~
+      sessions:
+        default:
+          symfony2: ~

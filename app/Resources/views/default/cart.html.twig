@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cart{% endblock %}
+
+{% block content %}
+
+	<div class="row">
+		
+		{% if cart is empty %}
+
+			<h1 class="lead">Cart is empty, nothing to see.</h1>
+
+		{% else %}
+
+			<table class="table table-striped">
+			      <thead>
+			        <tr>
+			          <th>#</th>
+			          <th>Name</th>
+			          <th>Category</th>
+			          <th>Currency</th>
+			          <th>Price</th>
+			        </tr>
+			      </thead>
+
+			      <tbody>
+			      	{% for item in cart %}
+				        <tr>
+				          <th scope="row">{{ item['id'] }}</th>
+				          <td>{{ item['name'] }}</td>
+				          <td>{{ item['category'] }}</td>
+				          <td>{{ item['currency'] }}</td>
+				          <td>{{ item['price'] | number_format(2) }}</td>
+				        </tr>
+			        {% endfor %}
+
+			        <tr>
+			        	<td></td>
+			        	<td></td>
+			        	<td></td>
+			        	<td><strong>Total Price:</strong></td>
+			        	<td></td>
+			        </tr>
+
+			        <tr>
+			        	<td></td>
+			        	<td></td>
+			        	<td></td>
+			        	<td></td>
+			        	<td>
+							<form action="{{ path('clear_cart') }}" method="post">
+								<button type="submit" class="btn btn-danger">Clear Cart</button>
+							</form>
+			        	</td>
+			        </tr>
+			      </tbody>
+			</table>
+
+		{% endif %}
+
+	</div>
+
+{% endblock %}
