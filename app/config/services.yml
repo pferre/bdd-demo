@@ -3,6 +3,6 @@
 parameters:
 #    parameter_name: value
 
-# services:
-#    totalise:
-#        class: AppBundle\Cart\Totalise
+services:
+   totalise:
+       class: AppBundle\Cart\Totalise

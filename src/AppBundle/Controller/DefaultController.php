@@ -91,10 +91,14 @@ class DefaultController extends Controller
     public function viewCartAction(Request $request)
     {	
     	$session = $request->getSession();
-    	$values = $session->get('cart');
+    	$cartValues = $session->get('cart');
+
+        $totalise = $this->get('totalise');
+        $totalPriceOfCart = $totalise->execute($cartValues);
 
     	return $this->render('default/cart.html.twig', [
-    		'cart' => $values
+    		'cart'  => $cartValues,
+            'total' => $totalPriceOfCart
 		]);
     }
 

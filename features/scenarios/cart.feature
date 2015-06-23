@@ -37,6 +37,7 @@ Feature: Cart
     And my cart should be empty
     Then I should see a message stating that my cart is empty
 
+
   Scenario: Show cart totals
   	Given the following products in the database:
     | id | name           | price | category | currency |
@@ -49,3 +50,9 @@ Feature: Cart
     And I add product "Magic Wand" to my cart
     Then I should have 3 products in my cart
     And my cart total should be "147.30"
+
+  @text
+  Scenario: I want to see hello on the homepage
+    Given I am on "homepage"
+    When I visit "/"
+    Then I want to see "hello"

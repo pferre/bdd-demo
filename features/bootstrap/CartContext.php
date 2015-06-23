@@ -158,15 +158,24 @@ class CartContext extends BaseContext implements SnippetAcceptingContext
      */
     public function myCartTotalShouldBe($amount)
     {
-        $cart = $this->getItemsInSession();
+        $this->visit('cart');
 
-        $price = 0;
+        $this->assertPageContainsText($amount);
+    }
 
-        foreach ($cart as $item => $value) {
-            $price += $value['price'];
-        }
+    /**
+     * @When I visit :uri
+     */
+    public function iVisit($uri)
+    {
+        $this->visit($uri);
+    }
 
-        PHPUnit_Framework_Assert::assertEquals($amount, $price);
-
+    /**
+     * @Then I want to see :text
+     */
+    public function iWantToSee($text)
+    {
+        $this->assertPageContainsText($text);
     }
 }
