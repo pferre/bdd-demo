@@ -21,6 +21,11 @@ app/console doctrine:fixtures:load
 rm -rf app/cache/* 
 ```
 
+To get a server running quickly on localhost:
+```bash
+app/console server:start
+```
+
 Run the Behat tests
 ```bash
 bin/behat 
