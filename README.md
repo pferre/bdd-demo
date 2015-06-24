@@ -12,7 +12,7 @@ Instructions after you've cloned the repo:
 ```bash
 composer install -o
 
-app/console doctrine:database:create --force 
+app/console doctrine:database:create
 
 app/console doctrine:schema:update --force
 
