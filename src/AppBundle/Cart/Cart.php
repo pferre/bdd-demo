@@ -4,11 +4,20 @@ namespace AppBundle\Cart;
 
 use AppBundle\Entity\Product;
 
+
 class Cart
 {
 
-    public function add(Product $product)
+	protected $cartValues = [];
+	
+
+    public function addItem(Product $product, $amount)
+    {    	
+        array_push($this->cartValues, $product);
+    }
+
+    public function getCart()
     {
-        return [$product];
+        return $this->cartValues;
     }
 }

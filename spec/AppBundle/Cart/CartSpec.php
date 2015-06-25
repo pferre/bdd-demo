@@ -5,18 +5,22 @@ namespace spec\AppBundle\Cart;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
+use AppBundle\Entity\Product;
+
+
 class CartSpec extends ObjectBehavior
 {
+
     function it_is_initializable()
     {
         $this->shouldHaveType('AppBundle\Cart\Cart');
     }
 
-    function it_should_add_products_to_the_cart($product)
+    function it_adds_an_item_to_cart(Product $product)
     {
-    	$product->beADoubleOf('AppBundle\Entity\Product');
-    	$this->add($product)->shouldReturn([
-    		$product
-		]);
+    	$this->addItem($product, $amount = 1);
+
+    	$this->getCart()->shouldHaveCount(1);
     }
+
 }

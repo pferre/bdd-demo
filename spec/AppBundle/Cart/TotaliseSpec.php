@@ -17,6 +17,6 @@ class TotaliseSpec extends ObjectBehavior
 
     function it_should_totalise_the_cart()
     {
-    	$this->execute($this->cart)->shouldReturn(147.30);
+    	$this->execute($this->products)->shouldReturn(147.30);
     }
 }

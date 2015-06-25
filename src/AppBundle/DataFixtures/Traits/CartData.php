@@ -5,7 +5,7 @@ namespace AppBundle\DataFixtures\Traits;
 
 trait CartData
 {
-    public $cart = [
+    public $products = [
         [
             'id' => 1,
             'name' => 'Magic Wand',
