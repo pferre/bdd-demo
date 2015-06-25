@@ -10,8 +10,7 @@ class Cart
 
 	protected $cartValues = [];
 	
-
-    public function addItem(Product $product, $amount)
+    public function addItem(Product $product)
     {    	
         array_push($this->cartValues, $product);
     }
@@ -20,4 +19,5 @@ class Cart
     {
         return $this->cartValues;
     }
+
 }
