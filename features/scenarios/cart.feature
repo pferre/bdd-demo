@@ -51,7 +51,7 @@ Feature: Cart
     Then I should have 3 products in my cart
     And my cart total should be "147.30"
 
-  @text
+  @text_on_homepage
   Scenario: I want to see hello on the homepage
     Given I am on "homepage"
     When I visit "/"

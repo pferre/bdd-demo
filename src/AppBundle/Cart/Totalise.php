@@ -5,6 +5,9 @@ namespace AppBundle\Cart;
 class Totalise
 {
 
+    /**
+     * @param $cart
+     */
     public function execute($cart = [])
     {
         $total = 0;
