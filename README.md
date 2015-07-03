@@ -37,6 +37,3 @@ bin/phpspec run --format=pretty
 ```
 
 Slides: https://speakerdeck.com/pferre/behat-and-phpspec-workshop
-
-Google Hangout: https://www.youtube.com/watch?v=9tKLCjqJ1kQ
-
