@@ -26,11 +26,11 @@
 			      <tbody>
 			      	{% for item in cart %}
 				        <tr>
-				          <th scope="row">{{ item['id'] }}</th>
-				          <td>{{ item['name'] }}</td>
-				          <td>{{ item['category'] }}</td>
-				          <td>{{ item['currency'] }}</td>
-				          <td>{{ item['price'] | number_format(2) }}</td>
+				          <th scope="row">{{ item.id }}</th>
+				          <td>{{ item.name }}</td>
+				          <td>{{ item.category }}</td>
+				          <td>{{ item.currency }}</td>
+				          <td>{{ item.price | number_format(2) }}</td>
 				        </tr>
 			        {% endfor %}
 
