@@ -2,3 +2,4 @@
 .idea
 /app/cache
 /app/logs
+/data
